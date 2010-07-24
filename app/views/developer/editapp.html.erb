@@ -1,4 +1,4 @@
-<% form_for :application, @application, :url => {:action => "saveapp", :id => @application.id } do |f| %>
+<% form_for :application, @application, :url => {:action => "saveapp", :id => @application.id }, :html => {:multipart => true} do |f| %>
 
 	<p>Title: <br/>
 	<%= f.text_field :title %></p>
@@ -13,7 +13,7 @@
 	<%= f.text_field :discount_code %></p>
 	
 	<p>Icon File:  <br/>
-		</p>
+		<%= f.file_field :icon %></p>
 	
 	<p>Platform:  <br/>
 		<%= f.radio_button :platform, "M"%>Mac

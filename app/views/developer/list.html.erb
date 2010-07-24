@@ -1,6 +1,12 @@
+<p>Company: <%= @company.title %> (<%= @company.id %>)</p>
+
+
 <% for a in @applications %>
 
 <p>Title: <%= a.title %></p>
+<p><% if a.icon.exists? %>
+	<%= image_tag a.icon.url(:small) %>
+	<% end %></p>
 <p><a href="/developer/editapp?appid=<%= a.id %>">Edit</a> | <a href="/developer/deleteapp?appid=<%= a.id %>">Delete</a></p>
 
 <% end %>

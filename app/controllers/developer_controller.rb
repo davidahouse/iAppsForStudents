@@ -2,6 +2,13 @@ class DeveloperController < ApplicationController
 
   layout 'main'
 
+  def generate_regcode(length=6)
+    chars = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ23456789'
+    code = ''
+    length.times { |i| code << chars[rand(chars.length)] }
+    code
+  end
+  
   def index
 
   end
@@ -28,7 +35,9 @@ class DeveloperController < ApplicationController
   def saveregister
     if ( params[:id] == nil )
       company = Company.new(params[:company])
+      company.reg_code = generate_regcode(10)
       company.save
+      Registration.deliver_signup_notification(company)
       redirect_to :action => 'index'
     else
       company = Company.find(params[:id])
@@ -43,7 +52,13 @@ class DeveloperController < ApplicationController
   
   def list
     company_id = session[:company]
-    @applications = Application.find(:all,:conditions => ['company_id = ?',company_id])
+    
+    if company_id != nil
+      @applications = Application.find(:all,:conditions => ['company_id = ?',company_id])
+      @company = Company.find(company_id)
+    else
+      redirect_to :action => 'index'
+    end
   end
 
   def editapp
@@ -71,5 +86,7 @@ class DeveloperController < ApplicationController
     app.delete
     redirect_to :action => 'list'
   end
+  
+
   
 end

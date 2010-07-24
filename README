@@ -1,1 +1,21 @@
 Welcome to the code for the iAppsForStudents website. This site hosts an annual sale for Mac, iPhone and iPad applications specifically for students.
+
+
+Gems:
+aws-s3
+
+
+Plugins:
+
+script/plugin install git://github.com/adamwiggins/gmail_smtp.git
+script/plugin install git://github.com/thoughtbot/paperclip.git
+   *note that paperclip requires ImageMagick to run: www.imagemagick.org
+
+
+Environment:
+
+GMAIL_SMTP_USER
+GMAIL_SMTP_PASSWORD
+S3_ACCESSKEY
+S3_SECRETKEY
+S3_BUCKET

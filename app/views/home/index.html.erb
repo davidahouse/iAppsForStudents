@@ -5,6 +5,9 @@
 <% for a in @applications %>
 
 <p>Application: <%= a.title %></p>
-
+<p><% if a.icon.exists? %>
+	<%= image_tag a.icon.url(:small) %>
+	<% end %></p>
+	
 <% end %>
 <% end %>
