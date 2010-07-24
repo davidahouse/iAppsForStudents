@@ -1,0 +1,8 @@
+<% for a in @applications %>
+
+<p>Title: <%= a.title %></p>
+<p><a href="/developer/editapp?appid=<%= a.id %>">Edit</a> | <a href="/developer/deleteapp?appid=<%= a.id %>">Delete</a></p>
+
+<% end %>
+
+<a href="/developer/editapp">Register a new application</a>

@@ -1,0 +1,13 @@
+
+
+<% form_tag(:action => 'login', :method => 'post', :multipart => true ) do %>
+	
+	<p>Email: <br/><%= text_field_tag "email" %></p>
+	
+	<p>Registration Code: <br/><%= text_field_tag "reg_code"%></p>
+	
+	<%= submit_tag 'Submit' %>
+	
+<% end %>
+
+<a href="/developer/register">Register</a>

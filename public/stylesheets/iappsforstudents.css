@@ -1,0 +1,65 @@
+a.headerlink:link
+{
+	color: #000;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: none;
+}
+
+a.headerlink:visited
+{
+	color: #000;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: none;
+}
+
+a.headerlink:hover
+{
+	color: #CCC;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: underline;
+}
+
+a.headeractivelink:link
+{
+	color: blue;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: none;
+}
+
+a.headeractivelink:visited
+{
+	color: #blue;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: none;
+}
+
+a.headeractivelink:hover
+{
+	color: #CCC;
+	display: block;
+	float: left;
+	font-size:12px;
+	padding-top: 0px;
+	padding-right: 5px;
+	text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>iAppsForStudents <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'iappsforstudents.css'%>
+  <%= stylesheet_link_tag 'blueprint/screen.css'%>
+  <%= stylesheet_link_tag 'blueprint/src/grid.css'%>
+  <%= stylesheet_link_tag 'ui-lightness/jquery-ui-1.8.2.custom.css'%>
+  <%= javascript_include_tag 'jquery-1.4.2.js'%>
+  <%= javascript_include_tag 'jquery-ui-1.8.2.custom.min.js'%>
+</head>
+<body>
+
+<div class="container">
+	<div id="header" class="span-24">
+		<div class="span-24">
+			<h1>iAppsForStudents</h1>
+		</div>
+		<div class="span-24">
+			<h3>Back to School Sale  August 15th - September 1st</h3>
+		</div>
+	</div>
+	<hr/>	
+
+	<p style="color: green"><%= flash[:notice] %></p>
+	
+	<%= yield %>
+
+</div>
+
+
+</body>
+</html>

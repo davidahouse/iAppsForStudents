@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  company_id: 1
+  description: MyString
+  image_file: MyString
+  url: MyString
+  discount_code: MyString
+  platform: MyString
+  approved: false
+
+two:
+  title: MyString
+  company_id: 1
+  description: MyString
+  image_file: MyString
+  url: MyString
+  discount_code: MyString
+  platform: MyString
+  approved: false

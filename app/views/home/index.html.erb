@@ -1,0 +1,10 @@
+<p><a href="/?platform=mac">Mac</a> | <a href="/?platform=iphone">iPhone</a> |
+	<a href="/?platform=ipad">iPad</a></p>
+
+<% if @applications != nil %>
+<% for a in @applications %>
+
+<p>Application: <%= a.title %></p>
+
+<% end %>
+<% end %>
