@@ -4,7 +4,7 @@
 	<%= f.text_field :title %></p>
 	
 	<p>Description: <br/>
-	<%= f.text_area :description, :size => "60x12" %></p>
+	<%= f.text_field :description %></p>
 	
 	<p>Product URL: <br/>
 	<%= f.text_field :url %></p>
@@ -20,6 +20,15 @@
 		<%= f.radio_button :platform, "P"%>iPhone
 		<%= f.radio_button :platform, "D"%>iPad
 		<%= f.radio_button :platform, "U"%>Universal
+	</p>
+	
+	<p>List Price: <br/> <%= f.text_field :list_price %></p>
+	<p>Sale Price: <br/> <%= f.text_field :sale_price %></p>
+	
+	<p>Price Currency: <br/>
+		<%= f.radio_button :price_currency, 'USD' %>USD
+		<%= f.radio_button :price_currency, 'GBP' %>GBP
+		<%= f.radio_button :price_currency, 'EUR' %>EUR
 	</p>
 	
 	<p>

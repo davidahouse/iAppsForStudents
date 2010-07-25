@@ -1,9 +1,0 @@
-development:
-    access_key_id: ENV['S3_ACCESSKEY']
-    secret_access_key: ENV['S3_SECRETKEY']
-    bucket: ENV['S3_BUCKET']
-    
-production:
-    access_key_id: ENV['S3_ACCESSKEY']
-    secret_access_key: ENV['S3_SECRETKEY']
-    bucket: ENV['S3_BUCKET']

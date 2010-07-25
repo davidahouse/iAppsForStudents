@@ -1,13 +1,42 @@
 <p><a href="/?platform=mac">Mac</a> | <a href="/?platform=iphone">iPhone</a> |
 	<a href="/?platform=ipad">iPad</a></p>
 
+<% last_company = nil %>
+
 <% if @applications != nil %>
 <% for a in @applications %>
 
-<p>Application: <%= a.title %></p>
-<p><% if a.icon.exists? %>
+	<% if last_company != a.company %>
+	<h3><%= a.company.title %></h3>
+		<% last_company = a.company %>
+	<% end %>
+
+
+<div class="span-24">
+
+<div class="span-4">
+	<% if a.icon.exists? %>
 	<%= image_tag a.icon.url(:small) %>
-	<% end %></p>
+	<% end %>
+</div>
+
+<div class="span-10">
+	<ul>
+		<li><%= a.title %></li>
+		<li><%= a.description %></li>
+		<li>discount %</li>
+	</ul>
+</div>
+
+<div class="span-10 last">
+	<ul>
+		<li><a href="<%= a.url %>">Link</a></li>
+		<li><%= a.discount_code %></li>
+		<li><%= a.sale_price %> (<%= a.price_currency%>)</li>
+	</ul>
+</div>
+
+</div>
 	
 <% end %>
 <% end %>
