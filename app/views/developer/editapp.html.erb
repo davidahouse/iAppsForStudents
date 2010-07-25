@@ -13,6 +13,10 @@
 	<%= f.text_field :discount_code %></p>
 	
 	<p>Icon File:  <br/>
+		<% if @application.icon.exists? %>
+		<%= image_tag @application.icon.url(:small) %>
+		<% end %>
+		<br/>
 		<%= f.file_field :icon %></p>
 	
 	<p>Platform:  <br/>

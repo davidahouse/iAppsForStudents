@@ -24,14 +24,30 @@
 	<ul>
 		<li><%= a.title %></li>
 		<li><%= a.description %></li>
-		<li>discount %</li>
+		<li><a href="http://<%= a.url %>">Purchase Link</a></li>
 	</ul>
 </div>
 
 <div class="span-10 last">
 	<ul>
-		<li><a href="<%= a.url %>">Link</a></li>
-		<li><%= a.discount_code %></li>
+		<li>
+			<% if ( ( a.discount != nil ) && ( a.discount > 0.0 ) )%>
+				<%= a.discount.to_i %> %
+			<% end %>
+		</li>
+		<li>
+		
+		<% if a.discount_code != '' %>
+		
+			<%= a.discount_code %>
+		
+		<% else %>
+		
+			No discount code required
+			
+		<% end %>
+		
+		</li>
 		<li><%= a.sale_price %> (<%= a.price_currency%>)</li>
 	</ul>
 </div>

@@ -10,7 +10,9 @@ class DeveloperController < ApplicationController
   end
   
   def index
-
+    if ( session[:company] != nil )
+      redirect_to :action => 'list'
+    end
   end
   
   def login
@@ -76,6 +78,11 @@ class DeveloperController < ApplicationController
     else
       app = Application.find(params[:id])
       app.update_attributes(params[:application])
+    end
+    if ( (app.list_price != nil ) && ( app.sale_price != nil ) )
+      app.discount = ( (app.list_price - app.sale_price) / app.list_price ) * 100
+    else
+      app.discount = 0.0
     end
     app.save
     redirect_to :action => 'list'

@@ -17,6 +17,7 @@ class HomeController < ApplicationController
       @applications = Application.find(:all,:include => :company, :order => "companies.title,applications.title",
                     :conditions => ['platform = "D" or platform = "U"'])  
     end
+    
   end
 
 end
