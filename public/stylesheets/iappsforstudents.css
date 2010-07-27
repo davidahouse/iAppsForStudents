@@ -1,3 +1,7 @@
+/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280245778 */
+
+/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280194153 */
+
 /* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280183513 */
 
 a.headerlink:link
@@ -99,7 +103,7 @@ div.appinfo {
 div.burst {
 	width: 91px;
 	height: 89px;
-	background-image: url(/images/burst2.png);
+	background-image: url(/images/burst3.png);
 	margin-top: -55px;
 	margin-left: 50px;
 }
@@ -140,4 +144,43 @@ div.disccode {
 	margin-top: 15px;
 	text-align: center;
 	margin-left: 45px;
+}
+
+div#intro {
+	text-align: center;
+	color: #fffffe;
+	font-size: 2em;
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	text-shadow: #000000 1px 1px 4px;
+}
+
+div#header {
+	margin-top: 20px;
+}
+
+h1.logo {
+	margin-top: 25px;
+}
+
+h2.b2ss {
+	text-align: right;
+}
+
+h4.b2ss_date {
+	text-align: right;
+}
+
+div#nav {
+	text-align: right;
+}
+
+div.sections {
+	text-align: center;
+	margin-top: 20px;
+}
+
+hr.top-10 {
+	margin-top: 10px;
 }
