@@ -1,3 +1,5 @@
+/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280183513 */
+
 a.headerlink:link
 {
 	color: #000;
@@ -62,4 +64,80 @@ a.headeractivelink:hover
 	padding-top: 0px;
 	padding-right: 5px;
 	text-decoration: underline;
+}
+
+body {
+	background: url(/images/background.png) repeat;
+}
+
+div.appinfobckgnd {
+	width:  842px;
+	height:  241px;
+	margin-right: auto;
+	margin-left: auto;
+	background: url(/images/paper.png) repeat;
+}
+
+div.appinfo {
+	padding-left: 35px;
+	padding-top: 35px;
+}
+
+.apptitle {
+	font-size: 2em;
+}
+
+.appdesc {
+	font-size: 1.2em;
+	padding-left: 15px;
+}
+
+.appinforight {
+	float: right;
+}
+
+div.burst {
+	width: 91px;
+	height: 89px;
+	background-image: url(/images/burst2.png);
+	margin-top: -55px;
+	margin-left: 50px;
+}
+
+div.burst_content {
+	width: 50px;
+	height: 50px;
+	margin-left: 18px;
+	padding-top: 18px;
+}
+
+div.burst_percent {
+	text-align: center;
+	color: #fffc00;
+	text-shadow: silver 1px 1px 3px;
+	font-size: 1.5em;
+	opacity: 1;
+}
+
+div.percentoff {
+	margin-top: -8px;
+}
+
+div.app_price {
+	font-weight: bold;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 1.3em;
+	text-shadow: silver 1px 1px 3px;
+}
+
+div.now {
+	text-align: right;
+	margin-right: 20px;
+}
+
+div.disccode {
+	margin-top: 15px;
+	text-align: center;
+	margin-left: 45px;
 }
