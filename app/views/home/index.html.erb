@@ -7,13 +7,25 @@ Get back to school with these fantastic software discounts from independent Mac 
 
 <div class="sections">
 
-<p>
-	<a href="/?platform=mac"><img width="100px" height="100px" src="/images/imac-256.png"/></a>				
-	<a href="/?platform=iphone"><img width="100px" height="100px" src="/images/iPhone.png"></a>
-	<a href="/?platform=ipad"><img width="100px" height="100px" src="/images/iPad.png"></a>
-</p>
+	<div class="section1">
+		<a href="/?platform=mac"><img width="100px" height="100px" src="/images/imac-256.png"/></a>
+		<div class="<% if @platform == 'mac' %>selected_section<% else %>unselected_section<% end %>" ><a href="/?platform=mac">Mac</a></div>
+	</div>	
+	
+	<div class="subsection">
+		<div class="section2">
+			<a href="/?platform=iphone"><img width="100px" height="100px" src="/images/iPhone.png"></a>
+			<div class="<% if @platform == 'iphone' %>selected_section<% else %>unselected_section<% end %>"><a href="/?platform=iphone">iPhone</a></div>
+		</div>
+		
+		<div class="section3">
+			<a href="/?platform=ipad"><img width="100px" height="100px" src="/images/iPad.png"></a>
+			<div class="<% if @platform == 'ipad' %>selected_section<% else %>unselected_section<% end %>"><a href="/?platform=ipad">iPad</a></div>
+		</div>
+	</div>
 
 </div>
+
 
 <% last_company = nil %>
 
@@ -21,7 +33,7 @@ Get back to school with these fantastic software discounts from independent Mac 
 <% for a in @applications %>
 
 	<% if last_company != a.company %>
-	<h3><%= a.company.title %></h3>
+	<div class="company"><%= a.company.title %></div>
 		<% last_company = a.company %>
 	<% end %>
 

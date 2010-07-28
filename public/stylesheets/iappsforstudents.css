@@ -1,8 +1,3 @@
-/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280245778 */
-
-/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280194153 */
-
-/* @override http://0.0.0.0:3000/stylesheets/iappsforstudents.css?1280183513 */
 
 a.headerlink:link
 {
@@ -70,8 +65,16 @@ a.headeractivelink:hover
 	text-decoration: underline;
 }
 
+
 body {
 	background: url(/images/background.png) repeat;
+}
+
+div.company {
+	margin-top: 0;
+	font-size: 2em;
+	clear: both;
+	padding-top: 20px;
 }
 
 div.appinfobckgnd {
@@ -198,6 +201,60 @@ div.appinfo-edit {
 	padding-top: 0px;
 }
 
+div.sections {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5em;
+}
+
+div.section1 {
+	float: left;
+	margin-right: 40px;
+}
+
+div.subsection {
+	float: left;
+}
+
+div.section2 {
+	float: left;
+	margin-right: 40px;
+}
+
+div.section3 {
+	float: right;
+}
+
+div.selected_section {
+	margin-top: 15px;
+	border: 2px solid #424242;
+	-moz-border-radius:3ex;
+	-webkit-border-radius:3ex;
+	color: #ffffff;
+	background-color: #6f6f6f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#9f9f9f));
+}
+
+div.selected_section a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+div.unselected_section {
+	margin-top: 15px;
+	border: 2px solid #424242;
+	-moz-border-radius:3ex;
+	-webkit-border-radius:3ex;
+	color: #424242;
+	background-color: #dadada;
+	background: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#9f9f9f));
+}
+
+div.unselected_section a {
+	color: #424242;
+	text-decoration: none;
+}
 
 #edit-form {
 	width: 600px;
