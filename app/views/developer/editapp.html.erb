@@ -1,10 +1,12 @@
+<div id="edit-form">
+
 <% form_for :application, @application, :url => {:action => "saveapp", :id => @application.id }, :html => {:multipart => true} do |f| %>
 
 	<p>Title: <br/>
 	<%= f.text_field :title %></p>
 	
 	<p>Description: <br/>
-	<%= f.text_field :description %></p>
+	<%= f.text_area :description, :rows => 5 %></p>
 	
 	<p>Product URL: <br/>
 	<%= f.text_field :url %></p>
@@ -20,21 +22,18 @@
 		<%= f.file_field :icon %></p>
 	
 	<p>Platform:  <br/>
-		<%= f.radio_button :platform, "M"%>Mac
-		<%= f.radio_button :platform, "P"%>iPhone
-		<%= f.radio_button :platform, "D"%>iPad
-		<%= f.radio_button :platform, "U"%>Universal
+		<%= f.select(:platform, [['Mac','M'],['iPhone','P'],['iPad','D'],['Universal','U']])%>
 	</p>
 	
 	<p>List Price: <br/> <%= f.text_field :list_price %></p>
 	<p>Sale Price: <br/> <%= f.text_field :sale_price %></p>
 	
 	<p>Price Currency: <br/>
-		<%= f.radio_button :price_currency, 'USD' %>USD
-		<%= f.radio_button :price_currency, 'GBP' %>GBP
-		<%= f.radio_button :price_currency, 'EUR' %>EUR
+		<%= f.select(:price_currency,[['USD','USD'],['GBP','GBP'],['EUR','EUR']])%>
 	</p>
 	
 	<p>
 	<%= f.submit %></p>
 <% end %>
+
+</div>

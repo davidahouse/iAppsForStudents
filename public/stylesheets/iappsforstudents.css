@@ -184,3 +184,44 @@ div.sections {
 hr.top-10 {
 	margin-top: 10px;
 }
+
+div.appinfobckgnd-edit {
+	width:  842px;
+	height:  241px;
+	margin-right: auto;
+	margin-left: 10px;
+	background: url(/images/paper.png) repeat;
+}
+
+div.appinfo-edit {
+	padding-left: 35px;
+	padding-top: 0px;
+}
+
+
+#edit-form {
+	width: 600px;
+	margin-top: 25px;
+}
+
+#edit-form input, #edit-form textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#edit-form textarea {
+	height: 90px;
+}
+
+#edit-form textarea:focus, #edit-form input:focus {
+	border: 2px solid #900;
+}
+
+#edit-form input.submit-button {
+	width: 100px;
+	float: right;
+}

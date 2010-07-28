@@ -1,4 +1,9 @@
 
+<div id="intro">
+Welcome developers! Sign-in to manage your applications, or register to create a new account. Thanks for your support. 
+</div>
+
+<hr class="top-10"/>
 
 <% form_tag(:action => 'login', :method => 'post', :multipart => true ) do %>
 	
@@ -9,5 +14,8 @@
 	<%= submit_tag 'Submit' %>
 	
 <% end %>
+
+
+<hr class="top-10"/>
 
 <a href="/developer/register">Register</a>
