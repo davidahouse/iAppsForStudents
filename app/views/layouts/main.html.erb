@@ -10,6 +10,21 @@
   <%= stylesheet_link_tag 'blueprint/src/grid.css'%>
   <%= javascript_include_tag 'curvycorners.js'%>
   <%= javascript_include_tag 'application.js'%>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-923601-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </head>
 <body>
 
@@ -23,7 +38,7 @@
 			<h4 class="b2ss_date">August 15th - September 1st</h4>
 		</div>
 		<div class="span-24">
-			<div class="span-20">&nbsp;</div>
+			<div class="span-20"><div id="twitternav">Follow us on twitter: <a href="http://www.twitter.com/iappsforstudent" target="_new">@iappsforstudent</a></div></div>
 			<div class="span-4 last">
 				<div id="nav"><a href="/">Home</a> | <a href="/developer">Developer Login</a></div>
 			</div>
@@ -36,6 +51,12 @@
 	<%= yield %>
 
 </div>
+
+
+<div id="footer">
+	Brought to you by: <a href="http://www.bluelightninglabs.com" target="_new">Blue Lightning Labs</a> : <a href="http://www.twitter.com/shanezilla" target="_new">@shanezilla</a> and <a href="http://www.randomaccident.com" target="_new">Random Accident</a> : <a href="http://www.twitter.com/davidahouse" target="_new">@davidahouse</a>
+</div>
+
 
 
 </body>

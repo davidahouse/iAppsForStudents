@@ -84,6 +84,9 @@ class DeveloperController < ApplicationController
     else
       app.discount = 0.0
     end
+    if app.approved == nil
+      app.approved = true
+    end
     app.save
     redirect_to :action => 'list'
   end

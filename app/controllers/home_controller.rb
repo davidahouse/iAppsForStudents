@@ -31,14 +31,14 @@ class HomeController < ApplicationController
       apps = Application.find(:all)
       for a in apps
         
-        if ( ( a.price_currency != nil ) && ( a.discount != nil ) )
+        if ( ( a.price_currency != nil ) && ( a.list_price != nil ) && (a.sale_price != nil) )
         
           if ( a.price_currency == 'USD' )
-            @totaldiscount = @totaldiscount + a.discount
+            @totaldiscount = @totaldiscount + (a.list_price - a.sale_price)
           elsif ( a.price_currency == 'EUR' )
-            @totaldiscount = @totaldiscount + (a.discount * 1.2979)
+            @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.2979)
           else
-            @totaldiscount = @totaldiscount + (a.discount * 1.5583)
+            @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.5583)
           end
         end
         
