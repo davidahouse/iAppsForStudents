@@ -79,6 +79,15 @@ class DeveloperController < ApplicationController
       app = Application.find(params[:id])
       app.update_attributes(params[:application])
     end
+    
+    if app.list_price.include? "$"
+      app.list_price = app.list_price.sub(/$/,'')
+    end
+
+    if app.sale_price.include? "$"
+      app.sale_price = app.sale_price.sub(/$/,'')
+    end
+    
     if ( (app.list_price != nil ) && ( app.sale_price != nil ) )
       app.discount = ( (app.list_price - app.sale_price) / app.list_price ) * 100
     else

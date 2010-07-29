@@ -86,7 +86,11 @@ Get back to school with these fantastic software discounts from independent Mac 
 			</div>
 				
 				<div class="now">
-					<a href="http://<%= a.url %>">Get it Now!</a>
+					<% if a.url.include? "http" %>
+						<a href="<%= a.url %>">Get it Now!</a>
+					<% else %>
+						<a href="http://<%= a.url %>">Get it Now!</a>
+					<% end %>
 				</div>
 				
 				<div class="disccode">
