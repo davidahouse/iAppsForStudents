@@ -282,3 +282,13 @@ div.unselected_section a {
 	width: 100px;
 	float: right;
 }
+
+div#countdown {
+	text-align: center;
+	color: #fffffe;
+	font-size: 2em;
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	text-shadow: #000000 1px 1px 4px;
+}

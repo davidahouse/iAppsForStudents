@@ -1,4 +1,8 @@
 
+
+
+<% if ENV['saleActive'] == 'YES' %>
+
 <div id="intro">
 Get back to school with these fantastic software discounts from independent Mac and iPhone developers. 
 </div>
@@ -103,4 +107,20 @@ Get back to school with these fantastic software discounts from independent Mac 
 </div>
 	
 <% end %>
+<% end %>
+
+<% else %>
+
+<div id="intro">
+Sale begins in:
+</div>
+
+<script type="text/javascript">countdown_clock(10, 08, 15, 00, 00, 1);</script>
+
+<hr class="top-10"/>
+
+<div id="intro">
+	<%= @devcount %> Developers, <%= @appcount %> Applications and over $<%= @totaldiscount %> of discounts
+</div>
+
 <% end %>
