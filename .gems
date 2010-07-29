@@ -1,0 +1,2 @@
+rails -v 2.3.5
+aws-s3 --version 0.6.2

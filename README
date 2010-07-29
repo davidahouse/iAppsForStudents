@@ -19,3 +19,4 @@ GMAIL_SMTP_PASSWORD
 S3_ACCESSKEY
 S3_SECRETKEY
 S3_BUCKET
+saleActive	  ( set to YES to activate sale. otherwise the countdown timer is displayed )
