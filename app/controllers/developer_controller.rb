@@ -64,10 +64,15 @@ class DeveloperController < ApplicationController
   end
 
   def editapp
-    if ( params[:appid] == nil )
-      @application = Application.new
+    
+    if ( params[:existingapp] == nil )
+      if ( params[:appid] == nil )
+        @application = Application.new
+      else
+        @application = Application.find(params[:appid])
+      end
     else
-      @application = Application.find(params[:appid])
+      @application = params[:existingapp]
     end
   end
   
@@ -88,8 +93,17 @@ class DeveloperController < ApplicationController
     if app.approved == nil
       app.approved = true
     end
-    app.save
-    redirect_to :action => 'list'
+    
+    if app.save
+      redirect_to :action => 'list'
+    else
+      errormsg = "<p>Errors saving application data:</p>"
+      app.errors.each_full do |msg|
+        errormsg = errormsg + "<p>" + msg + "</p>"
+      end
+      flash[:notice] = errormsg
+      redirect_to :action => 'list'
+    end
   end
   
   def deleteapp
