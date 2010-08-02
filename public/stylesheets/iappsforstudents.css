@@ -159,6 +159,16 @@ div#intro {
 	text-shadow: #000000 1px 1px 4px;
 }
 
+div#intro2 {
+	text-align: center;
+	color: #fffffe;
+	font-size: 1.5em;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	text-shadow: #000000 1px 1px 4px;
+}
+
 div#header {
 	margin-top: 20px;
 }
