@@ -63,6 +63,28 @@ class DeveloperController < ApplicationController
     end
   end
 
+  def editcompany
+    company_id = session[:company]
+    @company = Company.find(company_id)
+  end
+
+  def savecompany
+    company_id = session[:company]
+    company = Company.find(company_id)
+    company.update_attributes(params[:company])
+    if company.save
+      redirect_to :action => 'list'
+    else
+      errormsg = "<p>Errors saving company data:</p>"
+      app.errors.each_full do |msg|
+        errormsg = errormsg + "<p>" + msg + "</p>"
+      end
+      flash[:notice] = errormsg
+      redirect_to :action => 'list'
+    end
+  end
+
+
   def editapp
     
     if ( params[:existingapp] == nil )

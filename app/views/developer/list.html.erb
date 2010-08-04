@@ -7,7 +7,18 @@
 
 <hr class="top-10"/>
 
-<h3><%= @company.title %></h3>
+<h3><%= @company.title %>
+
+	<% if ((@company.url != nil) && (@company.url != '')) %>
+
+	<% if @company.url.include? "http" %>
+		( <a href="<%= @company.url %>">site</a> )
+	<% else %>
+		( <a href="http://<%= @company.url %>">site</a> )
+	<% end %>
+
+	<% end %>
+	</h3>
 
 <% for a in @applications %>
 
@@ -23,12 +34,25 @@
 
 			<div class="span-12">
 				<div class="apptitle">
-					<%= a.title %>
+					<%= a.title %> 
+					<% if ( (a.moreinfo != nil) && (a.moreinfo != '') ) %>
+
+					<% if a.moreinfo.include? "http" %>
+						( <a href="<%= a.moreinfo %>">more info</a> )
+					<% else %>
+						( <a href="http://<%= a.moreinfo %>">more info</a> )
+					<% end %>
+
+					<% end %>
 				</div>
 			</div>
 			
 			<div class="span-12">
-				<%= a.description %>
+				<% if ( (a.description != nil) && (a.description != '')) %>
+					<%= a.description %>
+				<% else %>
+					(no description yet)
+				<% end %>
      		</div>
 		
 
@@ -89,3 +113,8 @@
 <p>
 <a href="/developer/editapp">Register a new application</a>
 </p>
+
+<p>
+<a href="/developer/editcompany">Edit company information</a>
+</p>
+

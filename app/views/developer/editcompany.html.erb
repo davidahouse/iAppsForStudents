@@ -1,0 +1,24 @@
+
+<hr class="top-10"/>
+
+<div id="edit-form">
+
+<% form_for :company, @company, :url => {:action => "savecompany", :id => @company.id }, :html => {:multipart => true} do |f| %>
+
+	<p>Title: <br/>
+	<%= f.text_field :title %></p>
+	
+	<p>Email: <br/>
+	<%= f.text_field :email %></p>
+
+	<p>Contact: <br/>
+	<%= f.text_field :contact %></p>
+	
+	<p>Site URL: <br/>
+	<%= f.text_field :url %></p>
+
+	<p>
+	<%= f.submit %></p>
+<% end %>
+
+</div>

@@ -37,7 +37,19 @@ Get back to school with these fantastic software discounts from independent Mac 
 <% for a in @applications %>
 
 	<% if last_company != a.company %>
-	<div class="company"><%= a.company.title %></div>
+	<div class="company"><%= a.company.title %>
+		
+		<% if ( (a.company.url != nil) && (a.company.url != '') ) %>
+
+		<% if a.company.url.include? "http" %>
+			( <a href="<%= a.company.url %>">site</a> )
+		<% else %>
+			( <a href="http://<%= a.company.url %>">site</a> )
+		<% end %>
+
+		<% end %>
+		
+		</div>
 		<% last_company = a.company %>
 	<% end %>
 
@@ -57,11 +69,24 @@ Get back to school with these fantastic software discounts from independent Mac 
 			<div class="span-12">
 				<div class="apptitle">
 					<%= a.title %>
+					<% if ( (a.moreinfo != nil) && (a.moreinfo != '') ) %>
+
+					<% if a.moreinfo.include? "http" %>
+						( <a href="<%= a.moreinfo %>">more info</a> )
+					<% else %>
+						( <a href="http://<%= a.moreinfo %>">more info</a> )
+					<% end %>
+
+					<% end %>
 				</div>
 			</div>
 			
 			<div class="span-12">
-				<%= a.description %>
+				<% if ( (a.description != nil) && (a.description != '')) %>
+					<%= a.description %>
+				<% else %>
+					(no description yet)
+				<% end %>
      		</div>
 		
 
