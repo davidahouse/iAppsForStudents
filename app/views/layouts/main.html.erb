@@ -6,8 +6,12 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>iAppsForStudents <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'iappsforstudents.css'%>
+  
+  <!--
   <%= stylesheet_link_tag 'blueprint/screen.css'%>
   <%= stylesheet_link_tag 'blueprint/src/grid.css'%>
+  -->
+  
   <%= javascript_include_tag 'curvycorners.js'%>
   <%= javascript_include_tag 'application.js'%>
 
@@ -29,32 +33,26 @@
 <body>
 
 <div class="container">
-	<div id="header" class="span-24">
-		<div class="span-12">
-			<h1 class="logo">iAppsForStudents</h1>
+	<div id="header">
+		<div id="logo">
+			<img src="images/logo.png"/>
 		</div>
-		<div class="span-12 last">
-			<h2 class="b2ss">Back to School Sale</h2>
-			<h4 class="b2ss_date">August 15th - September 1st</h4>
-		</div>
-		<div class="span-24">
-			<div class="span-20"><div id="twitternav">Follow us on twitter: <a href="http://www.twitter.com/iappsforstudent" target="_new">@iappsforstudent</a></div></div>
-			<div class="span-4 last">
-				<div id="nav"><a href="/">Home</a> | <a href="/developer">Developer Login</a></div>
-			</div>
+		<div id="banner">
+			<img src="images/banner.png"/>
 		</div>
 	</div>
-	<hr/>	
-
-	<div id="flasherror"><%= flash[:notice] %></div>
 	
-	<%= yield %>
+	<div class="content">	
 
+		<div id="flasherror"><%= flash[:notice] %></div>
+		
+		<%= yield %>
+	</div>
 </div>
 
 
 <div id="footer">
-	Brought to you by: <a href="http://www.bluelightninglabs.com" target="_new">Blue Lightning Labs</a> : <a href="http://www.twitter.com/shanezilla" target="_new">@shanezilla</a> and <a href="http://www.randomaccident.com" target="_new">Random Accident</a> : <a href="http://www.twitter.com/davidahouse" target="_new">@davidahouse</a>
+	Brought to you by <a href="http://www.bluelightninglabs.com" class="footer" target="_new">Blue Lightning Labs</a> and <a href="http://www.randomaccident.com" class="footer" target="_new">Random Accident</a>
 </div>
 
 

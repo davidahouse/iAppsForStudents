@@ -7,8 +7,6 @@
 Get back to school with these fantastic software discounts from independent Mac and iPhone developers. 
 </div>
 
-<hr class="top-10"/>
-
 <div class="sections">
 
 	<div class="section1">
@@ -119,16 +117,25 @@ Get back to school with these fantastic software discounts from independent Mac 
 
 <% else %>
 
-<div id="intro">
-Sale begins in:
-</div>
+	<div id="presale">
+		<script type="text/javascript">countdown_clock(10, 08, 15, 00, 00, 1);</script>
 
-<script type="text/javascript">countdown_clock(10, 08, 15, 00, 00, 1);</script>
+		<div id="salestart">Sale Start</div>
 
-<hr class="top-10"/>
-
-<div id="intro">
-	<%= @devcount %> Developers, <%= @appcount %> Applications and over $<%= @totaldiscount %> of discounts
-</div>
+		<div id="salestats">
+			<div><%= @devcount %> Developers</div>
+			<div><%= @appcount %> Applications</div>
+			<div>$<%= @totaldiscount %> in discounts</div>
+		</div>
+		
+		<div id="presale_developers"><a href="/developer" class="iapps">Developers Sign Up Here</a><div>or <a href="/developer" class="iapps">Login</a></div></div>
+		
+		<div id="presale_twitter">
+			<a href="http://twitter.com/iappsforstudent" class="iapps">
+				<img src="images/twitter.png"/>
+				<div id="presale_follow">Follow Us</div>
+			</a>
+		</div>
+	</div>
 
 <% end %>

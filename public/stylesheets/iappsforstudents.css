@@ -1,283 +1,124 @@
 
-a.headerlink:link
+a.iapps:link
 {
-	color: #000;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #362418;
 	text-decoration: none;
 }
 
-a.headerlink:visited
+a.iapps:visited
 {
-	color: #000;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #4e3423;
 	text-decoration: none;
 }
 
-a.headerlink:hover
+a.iapps:hover
 {
-	color: #CCC;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #4e3423;
 	text-decoration: underline;
 }
 
-a.headeractivelink:link
+a.footer:link
 {
-	color: blue;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #97968c;
 	text-decoration: none;
 }
 
-a.headeractivelink:visited
+a.footer:visited
 {
-	color: #blue;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #97968c;
 	text-decoration: none;
 }
 
-a.headeractivelink:hover
+a.footer:hover
 {
-	color: #CCC;
-	display: block;
-	float: left;
-	font-size:12px;
-	padding-top: 0px;
-	padding-right: 5px;
+	color: #97968c;
 	text-decoration: underline;
 }
 
+img {
+	border: 0px;
+}
 
 body {
 	background: url(/images/background.png) repeat;
+	margin: 0;
+	font-family: "Myriad Pro", "Lucida Grande", "Gill Sans";
 }
 
-div.company {
-	margin-top: 0;
-	font-size: 2em;
-	clear: both;
-	padding-top: 20px;
+div.container {
+	width: 100%;
 }
 
-div.appinfobckgnd {
-	width:  842px;
-	height:  241px;
-	margin-right: auto;
+div.content {
+	width: 80%;
 	margin-left: auto;
-	background: url(/images/paper.png) repeat;
-}
-
-div.appinfo {
-	padding-left: 35px;
-	padding-top: 35px;
-}
-
-.apptitle {
-	font-size: 2em;
-}
-
-.appdesc {
-	font-size: 1.2em;
-	padding-left: 15px;
-}
-
-.appinforight {
-	float: right;
-}
-
-div.burst {
-	width: 91px;
-	height: 89px;
-	background-image: url(/images/burst3.png);
-	margin-top: -55px;
-	margin-left: 50px;
-}
-
-div.burst_content {
-	width: 50px;
-	height: 50px;
-	margin-left: 18px;
-	padding-top: 18px;
-}
-
-div.burst_percent {
-	text-align: center;
-	color: #fffc00;
-	text-shadow: silver 1px 1px 3px;
-	font-size: 1.5em;
-	opacity: 1;
-}
-
-div.percentoff {
-	margin-top: -8px;
-}
-
-div.app_price {
-	font-weight: bold;
-	text-align: right;
-	margin-right: 10px;
-	font-size: 1.3em;
-	text-shadow: silver 1px 1px 3px;
-}
-
-div.now {
-	text-align: right;
-	margin-right: 20px;
-}
-
-div.disccode {
-	margin-top: 15px;
-	text-align: center;
-	margin-left: 45px;
-}
-
-div#intro {
-	text-align: center;
-	color: #fffffe;
-	font-size: 2em;
-	width: 60%;
 	margin-right: auto;
-	margin-left: auto;
-	text-shadow: #000000 1px 1px 4px;
-}
-
-div#intro2 {
-	text-align: center;
-	color: #fffffe;
-	font-size: 1.5em;
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
-	text-shadow: #000000 1px 1px 4px;
+	margin-top: 80px;
+	color: #362418;
 }
 
 div#header {
-	margin-top: 20px;
+	background: url(/images/header_background.png);
+	width: 100%;
+	height: 192px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div#logo {
+	margin-left: auto;
+	margin-right: auto;
+	width: 275px;
+	height: 106px;
+	padding-top: 30px;
+}
+
+div#banner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 669px;
+	height: 92px;
+	margin-top: 30px;
+}
+
+div#presale {
+	text-align: center;
+	font-size: 2em;
+}
+
+div#countdown {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div#salestart {
+	font-size: .6em;
+}
+
+div#salestats {
+	margin-top: 30px;
+}
+
+div#presale_developers {
+	margin-top: 30px;
+	font-size: 0.75em;
+}
+
+div#presale_twitter {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#presale_follow {
+	font-size: 0.5em;
+	margin-top: 5px;
 }
 
 div#footer {
-	margin-top: 100px;
+	color: #97968c;
 	text-align: center;
-	font-size: .5em;
-}
-
-h1.logo {
-	margin-top: 25px;
-}
-
-h2.b2ss {
-	text-align: right;
-}
-
-h4.b2ss_date {
-	text-align: right;
-}
-
-div#flasherror {
-	color: blue;
-}
-
-div#nav {
-	text-align: right;
-}
-
-div#twitternav {
-	text-align: left;
-}
-
-div.sections {
-	text-align: center;
-	margin-top: 20px;
-}
-
-hr.top-10 {
-	margin-top: 10px;
-}
-
-div.appinfobckgnd-edit {
-	width:  842px;
-	height:  241px;
-	margin-right: auto;
-	margin-left: 10px;
-	background: url(/images/paper.png) repeat;
-}
-
-div.appinfo-edit {
-	padding-left: 35px;
-	padding-top: 0px;
-}
-
-div.sections {
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 1.5em;
-}
-
-div.section1 {
-	float: left;
-	margin-right: 40px;
-}
-
-div.subsection {
-	float: left;
-}
-
-div.section2 {
-	float: left;
-	margin-right: 40px;
-}
-
-div.section3 {
-	float: right;
-}
-
-div.selected_section {
-	margin-top: 15px;
-	border: 2px solid #424242;
-	-moz-border-radius:3ex;
-	-webkit-border-radius:3ex;
-	color: #ffffff;
-	background-color: #6f6f6f;
-	background: -webkit-gradient(linear, left top, left bottom, from(#6f6f6f), to(#9f9f9f));
-}
-
-div.selected_section a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-div.unselected_section {
-	margin-top: 15px;
-	border: 2px solid #424242;
-	-moz-border-radius:3ex;
-	-webkit-border-radius:3ex;
-	color: #424242;
-	background-color: #dadada;
-	background: -webkit-gradient(linear, left top, left bottom, from(#dadada), to(#9f9f9f));
-}
-
-div.unselected_section a {
-	color: #424242;
-	text-decoration: none;
+	margin-top: 30px;
 }
 
 #edit-form {
@@ -305,14 +146,4 @@ div.unselected_section a {
 #edit-form input.submit-button {
 	width: 100px;
 	float: right;
-}
-
-div#countdown {
-	text-align: center;
-	color: #fffffe;
-	font-size: 2em;
-	width: 60%;
-	margin-right: auto;
-	margin-left: auto;
-	text-shadow: #000000 1px 1px 4px;
 }
