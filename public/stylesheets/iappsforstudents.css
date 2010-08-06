@@ -74,6 +74,10 @@ div.clear {
 	clear: both;
 }
 
+div.center {
+	text-align: center;
+}
+
 div.container {
 	width: 100%;
 }
@@ -309,6 +313,58 @@ div.devapplistitem {
 
 div#devapplist {
 	margin-bottom: -50px;
+}
+
+div#welcome_intro{
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2em;
+}
+
+div.registertext {
+	margin-bottom: 40px;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+div.logintext {
+	margin-top: 70px;
+	font-size: 1.3em;
+	margin-bottom: -15px;
+}
+
+
+div.signin {
+	width: 410px;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+div.signinoffset {
+	width: 410px;
+}
+
+div#loginsubmit {
+	text-align: right;
+}
+
+p.login {
+	margin-bottom: -1px;
+}
+
+input.iapps {
+	font-size: 1.5em;
+}
+
+input#loginemail {
+	width: 400px;
+}
+
+input#loginregcode {
+	width: 400px;
 }
 
 #edit-form {

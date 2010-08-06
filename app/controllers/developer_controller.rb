@@ -13,6 +13,8 @@ class DeveloperController < ApplicationController
     if ( session[:company] != nil )
       redirect_to :action => 'list'
     end
+	
+	render :layout => 'admin'
   end
   
   def login

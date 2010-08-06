@@ -1,21 +1,33 @@
 
-<div id="intro">
-Welcome developers! Sign-in to manage your applications, or register to create a new account. Registration is free, just click on the Register link below. Once you have filled out your registration information, an email will be sent with your registration login code. Thanks for your support. 
+<div class="center">
+	<div id="welcome_intro">
+	<p>Welcome developers!</p>
+	<p>Sign-in to manage your applications, or register to create a new account. Registration is free, just click on the Register link below. Once you have filled out your registration information, an email will be sent with your registration login code. Thanks for your support.</p>
+	</div>
+
+	<div class="registertext">
+		<a href="/developer/register" class="iapps">Register</a>
+	</div>
+
+	or
+
+	<div class="logintext">
+		Login
+	</div>
+	
+	<% form_tag(:action => 'login', :method => 'post', :multipart => true ) do %>
+		<div class="signin">
+			<div class="signinoffset">
+				<p class="login">Email</p><%= text_field_tag "email", nil, :class => 'iapps', :id => 'loginemail' %>
+				
+				<p class="login">Registration Code</p><%= text_field_tag "reg_code", nil, :class => 'iapps', :id => 'loginregcode' %>
+				
+				<div id="loginsubmit">
+					<%= submit_tag 'Submit' %>
+				</div>
+			</div>
+		</div>			
+	<% end %>
+	</div>
 </div>
 
-<hr class="top-10"/>
-
-<% form_tag(:action => 'login', :method => 'post', :multipart => true ) do %>
-	
-	<p>Email: <br/><%= text_field_tag "email" %></p>
-	
-	<p>Registration Code: <br/><%= text_field_tag "reg_code"%></p>
-	
-	<%= submit_tag 'Submit' %>
-	
-<% end %>
-
-
-<hr class="top-10"/>
-
-<a href="/developer/register">Register</a>
