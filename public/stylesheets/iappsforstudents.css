@@ -133,10 +133,12 @@ div#presale_developers {
 	font-size: 0.75em;
 }
 
-div#presale_twitter {
+div#center_twitter {
 	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+	font-size: 2em;
 }
 
 div#presale_follow {
@@ -164,7 +166,8 @@ div#devlogin {
 div#footer {
 	color: #97968c;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 40px;
+	margin-bottom: 75px;
 }
 
 div.sections {
@@ -289,6 +292,23 @@ div.disccode {
 	font-size: .75em;
 	margin-top: 30px;
 	text-align: center;
+}
+
+div.appinfo-edit {
+	text-align: center;
+}
+
+div.company_admin {
+	text-align: center;
+	margin-top: 50px;
+}
+
+div.devapplistitem {
+	margin-top: 75px;
+}
+
+div#devapplist {
+	margin-bottom: -50px;
 }
 
 #edit-form {

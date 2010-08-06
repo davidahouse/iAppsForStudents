@@ -1,120 +1,104 @@
 
+<!--
 <div id="intro2">
 <p>Add any Mac, iPhone, or iPad software that you wish to participate in the Back to School Sale.</p> 
 <p>Due to the nature of the AppStore iPhone and iPad apps will need to be discounted throughout the AppStore during the sale period.</p>
 <p>When the sale starts your software will be listed as shown below.</p>
 </div>
+-->
 
-<hr class="top-10"/>
-
-<h3><%= @company.title %>
-
-	<% if ((@company.url != nil) && (@company.url != '')) %>
-
-	<% if @company.url.include? "http" %>
-		( <a href="<%= @company.url %>">site</a> )
-	<% else %>
-		( <a href="http://<%= @company.url %>">site</a> )
-	<% end %>
-
-	<% end %>
-	</h3>
+<div id="devapplist">
+	<div class="companyname">
+		<% if ((@company.url != nil) && (@company.url != '')) %>
+			<% if @company.url.include? "http" %>
+				<a href="<%= @company.url %>" class="iapps"><%= @company.title %></a>
+			<% else %>
+				<%= @company.title %>
+			<% end %>
+		<% else%>
+			<%= @company.title %>
+		<% end %>
+	</div>
+</div>
 
 <% for a in @applications %>
 
-<div class="span-24">
-	<div class="appinfobckgnd-edit">
-		<div class="appinfo">
+<div class="devapplistitem">
+			<hr class="app"/>
+			
+			<div class="appinfo">
 	 
-			<div class="span-4">
+			<div class="app_icon">
 				<% if a.icon.exists? %>
 				<%= image_tag a.icon.url(:small) %>
 				<% end %>
 			</div>
 
-			<div class="span-12">
-				<div class="apptitle">
-					<%= a.title %> 
-					<% if ( (a.moreinfo != nil) && (a.moreinfo != '') ) %>
-
-					<% if a.moreinfo.include? "http" %>
-						( <a href="<%= a.moreinfo %>">more info</a> )
-					<% else %>
-						( <a href="http://<%= a.moreinfo %>">more info</a> )
-					<% end %>
-
-					<% end %>
-				</div>
-			</div>
-			
-			<div class="span-12">
-				<% if ( (a.description != nil) && (a.description != '')) %>
-					<%= a.description %>
-				<% else %>
-					(no description yet)
-				<% end %>
-     		</div>
-		
-
-		<!-- <div class="span-10 last"> -->
-		<div class="span-4 appinforight">
-		
-			<div class="burst">
-				<div class="burst_content">
-					<% if ( ( a.discount != nil ) && ( a.discount > 0.0 ) )%>
-						<div class="burst_percent">
-							<%= a.discount.to_i %> %
-							<div class="percentoff">
-						       Off
-							</div>
-						</div>
-					<% end %>
-				</div>
-			</div>
-			
-			<div class="app_price">
-				<%= a.sale_price %> (<%= a.price_currency%>)
-			</div>
-				
-				<div class="now">
-					<% if a.url.include? "http" %>
-						<a href="<%= a.url %>">Get it Now!</a>
-					<% else %>
-						<a href="http://<%= a.url %>">Get it Now!</a>
-					<% end %>
-				</div>
-				
-				<div class="disccode">
-				<% if a.discount_code != '' %>
-				
-					<div>Discount Code</div>
-					<%= a.discount_code %>
-				
-				<% else %>
-				
-					<div>No discount</div><div>code required</div>
+			<div class="app_text">
+				<div class="app_ident">
+					<div class="app_title">
+						<%= a.title %>
+					</div>
 					
-				<% end %>
+					<div class="app_description">
+						<%= a.description %>
+						<% if a.moreinfo != nil && a.moreinfo != '' %>
+							<a href="<%= a.moreinfo %>" class="iapps"> (more)</a>
+						<% end %>
+					</div>
 				</div>
-			
-		</div>
+				
+				<div class="app_detail">
+					<div class="app_buy">
+						<a href="http://<%= a.url %>"><img src="/images/buybox.png"/></a>
+						<a href="http://<%= a.url %>" class="app_detail"><div class="buy">BUY</div></a>
+						
+						<div class="app_price">
+							<a href="http://<%= a.url %>" class="app_detail"><%= a.sale_price %> (<%= a.price_currency%>)</a>
+						</div>
+											
+						<div class="percentoff">
+							<a href="http://<%= a.url %>" class="app_detail"><%= a.discount.to_i %> % Off</a>
+						</div>
+						
+						<div class="disccode">
+							<% if a.discount_code != '' %>
+							
+								<div>Discount Code</div>
+								<%= a.discount_code %>
+							
+							<% else %>
+							
+								<div>No discount</div><div>code required</div>
+								
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
 		
-		</div>
-	</div>
+		<div class="clear"></div>
+		
+		</div> <!-- end appinfo div -->
+		
+		<hr class="app"/>
 	
 	<div class="appinfo-edit">
-		<p><a href="/developer/editapp?appid=<%= a.id %>">Edit</a> | <a href="/developer/deleteapp?appid=<%= a.id %>">Delete</a></p>
+		<p><a href="/developer/editapp?appid=<%= a.id %>" class="iapps">Edit</a> | <a href="/developer/deleteapp?appid=<%= a.id %>" class="iapps">Delete</a></p>
 	</div>
+	
 </div>
 
 
 <% end %>
 
-<p>
-<a href="/developer/editapp">Register a new application</a>
-</p>
+<div class="company_admin">
+	<p>
+	<a href="/developer/editapp" class="iapps">Register a new application</a>
+	</p>
 
-<p>
-<a href="/developer/editcompany">Edit company information</a>
-</p>
+	<p>
+	<a href="/developer/editcompany" class="iapps">Edit company information</a>
+	</p>
+</div>
 

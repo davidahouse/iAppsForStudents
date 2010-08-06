@@ -61,6 +61,8 @@ class DeveloperController < ApplicationController
     else
       redirect_to :action => 'index'
     end
+	
+	render :layout => 'admin' 
   end
 
   def editcompany
@@ -86,7 +88,6 @@ class DeveloperController < ApplicationController
 
 
   def editapp
-    
     if ( params[:existingapp] == nil )
       if ( params[:appid] == nil )
         @application = Application.new

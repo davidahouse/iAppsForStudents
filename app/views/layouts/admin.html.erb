@@ -37,16 +37,23 @@
 		<div id="logo">
 			<a href="/"><img src="/images/logo.png"/></a>
 		</div>
-		<div id="banner">
-			<img src="/images/banner.png"/>
-		</div>
 	</div>
-	
+		
 	<div class="content">	
 
+	<div class="clear"></div>
+	
 		<div id="flasherror"><%= flash[:notice] %></div>
 		
 		<%= yield %>
+		
+	<div id="center_twitter">
+		<a href="http://twitter.com/iappsforstudent" class="iapps">
+			<img src="/images/twitter.png"/>
+			<div id="presale_follow">Follow Us</div>
+		</a>
+	</div>
+	
 	</div>
 </div>
 
