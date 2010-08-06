@@ -88,15 +88,15 @@
 				
 				<div class="app_detail">
 					<div class="app_buy">
-						<img src="/images/buybox.png"/>
-						<div class="buy">BUY</div>
+						<a href="http://<%= a.url %>"><img src="/images/buybox.png"/></a>
+						<a href="http://<%= a.url %>" class="app_detail"><div class="buy">BUY</div></a>
 						
 						<div class="app_price">
-							<%= a.sale_price %> (<%= a.price_currency%>)
+							<a href="http://<%= a.url %>" class="app_detail"><%= a.sale_price %> (<%= a.price_currency%>)</a>
 						</div>
 											
 						<div class="percentoff">
-							<%= a.discount.to_i %> % Off
+							<a href="http://<%= a.url %>" class="app_detail"><%= a.discount.to_i %> % Off</a>
 						</div>
 						
 						<div class="disccode">

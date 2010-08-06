@@ -17,6 +17,24 @@ a.iapps:hover
 	text-decoration: underline;
 }
 
+a.app_detail:link
+{
+	color: #362418;
+	text-decoration: none;
+}
+
+a.app_detail:visited
+{
+	color: #4e3423;
+	text-decoration: none;
+}
+
+a.app_detail:hover
+{
+	color: #4e3423;
+	text-decoration: underline;
+}
+
 a.footer:link
 {
 	color: #97968c;
