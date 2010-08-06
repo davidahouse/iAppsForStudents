@@ -54,83 +54,118 @@
 <% last_company = nil %>
 
 <% if @applications != nil %>
+
+<div class="company">
+
 <% for a in @applications %>
 
 	<% if last_company != a.company %>
-	<div class="company"><%= a.company.title %></div>
+		<div class="companyname"><%= a.company.title %></div>
+		<hr class="app"/>
+		
 		<% last_company = a.company %>
 	<% end %>
 
 	<% if a.approved == true %>
 
-
-<div class="span-24">
-	<div class="appinfobckgnd">
 		<div class="appinfo">
 	 
-			<div class="span-4">
+			<div class="app_icon">
 				<% if a.icon.exists? %>
 				<%= image_tag a.icon.url(:small) %>
 				<% end %>
 			</div>
 
-			<div class="span-12">
-				<div class="apptitle">
-					<%= a.title %>
+			<div class="app_text">
+				<div class="app_ident">
+					<div class="app_title">
+						<%= a.title %>
+					</div>
+					
+					<div class="app_description">
+						<%= a.description %>
+					</div>
+				</div>
+				
+				<div class="app_detail">
+					<div class="app_buy">
+						<img src="/images/buybox.png"/>
+						<div class="buy">BUY</div>
+						
+						<div class="app_price">
+							<%= a.sale_price %> (<%= a.price_currency%>)
+						</div>
+											
+						<div class="percentoff">
+							<%= a.discount.to_i %> % Off
+						</div>
+						
+						<div class="disccode">
+							<% if a.discount_code != '' %>
+							
+								<div>Discount Code</div>
+								<%= a.discount_code %>
+							
+							<% else %>
+							
+								<div>No discount</div><div>code required</div>
+								
+							<% end %>
+						</div>
+					</div>
 				</div>
 			</div>
-			
-			<div class="span-12">
-				<%= a.description %>
-     		</div>
 		
 
-		<!-- <div class="span-10 last"> -->
-		<div class="span-4 appinforight">
+									<!--
+									<div class="span-4 appinforight">
+									
+										<div class="burst">
+											<div class="burst_content">
+												<% if ( ( a.discount != nil ) && ( a.discount > 0.0 ) )%>
+													<div class="burst_percent">
+														<%= a.discount.to_i %> %
+														<div class="percentoff">
+														   Off
+														</div>
+													</div>
+												<% end %>
+											</div>
+										</div>
+										
+										<div class="app_price">
+											<%= a.sale_price %> (<%= a.price_currency%>)
+										</div>
+											
+											<div class="now">
+												<% if a.url.include? "http" %>
+													<a href="<%= a.url %>">Get it Now!</a>
+												<% else %>
+													<a href="http://<%= a.url %>">Get it Now!</a>
+												<% end %>
+											</div>
+											
+											<div class="disccode">
+											<% if a.discount_code != '' %>
+											
+												<div>Discount Code</div>
+												<%= a.discount_code %>
+											
+											<% else %>
+											
+												<div>No discount</div><div>code required</div>
+												
+											<% end %>
+											</div>
+										
+									</div>
+									-->
 		
-			<div class="burst">
-				<div class="burst_content">
-					<% if ( ( a.discount != nil ) && ( a.discount > 0.0 ) )%>
-						<div class="burst_percent">
-							<%= a.discount.to_i %> %
-							<div class="percentoff">
-						       Off
-							</div>
-						</div>
-					<% end %>
-				</div>
-			</div>
-			
-			<div class="app_price">
-				<%= a.sale_price %> (<%= a.price_currency%>)
-			</div>
-				
-				<div class="now">
-					<% if a.url.include? "http" %>
-						<a href="<%= a.url %>">Get it Now!</a>
-					<% else %>
-						<a href="http://<%= a.url %>">Get it Now!</a>
-					<% end %>
-				</div>
-				
-				<div class="disccode">
-				<% if a.discount_code != '' %>
-				
-					<div>Discount Code</div>
-					<%= a.discount_code %>
-				
-				<% else %>
-				
-					<div>No discount</div><div>code required</div>
-					
-				<% end %>
-				</div>
-			
-		</div>
+		<div class="clear"></div>
+		<hr class="app"/>
 		
-		</div>
-	</div>
-</div>
+		</div> <!-- end appinfo div -->
+</div> <!-- end company div -->
 
 	<% end %>
 	

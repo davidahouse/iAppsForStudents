@@ -198,9 +198,85 @@ div.unselected_section {
 	opacity: 0;
 }
 
+div.company {
+	margin-top: 30px;
+}
+
+div.companyname {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+hr.app {
+	width: 750px;
+}
+
+div.appinfo {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.app_icon {
+	margin-left: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+div.app_text {
+	float: right;
+}
+
+div.app_ident {
+	float: left;
+	width: 490px;
+}
+
+div.app_title {
+	font-size: 1.2em;
+}
+
+div.app_description {
+	font-size: .85em;
+	margin-top: 5px;
+
+}
+
+div.app_detail {
+	margin-right: 5px;
+	float: right;
+	margin-left: 10px;
+}
+
+div.app_buy {
+}
+
+div.buy {
+	margin-top: -55px;
+	margin-left: 23px;
+}
+
+div.app_price {
+	text-align: center;
+	font-weight: bold;
+	font-size: .8em;
+}
+
+div.percentoff {
+	text-align: center;
+	font-size: .7em;
+}
+
+div.disccode {
+	font-size: .75em;
+	margin-top: 30px;
+	text-align: center;
+}
+
 #edit-form {
 	width: 600px;
 	margin-top: 25px;
+	text-align: center;
 }
 
 #edit-form input, #edit-form textarea {
