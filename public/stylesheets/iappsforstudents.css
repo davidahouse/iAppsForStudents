@@ -21,18 +21,26 @@ a.footer:link
 {
 	color: #97968c;
 	text-decoration: none;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 a.footer:visited
 {
 	color: #97968c;
 	text-decoration: none;
+	margin-right: 5px;
+	margin-left: 5px;
+
 }
 
 a.footer:hover
 {
 	color: #97968c;
 	text-decoration: underline;
+	margin-right: 5px;
+	margin-left: 5px;
+
 }
 
 img {
@@ -121,11 +129,10 @@ div#presale_follow {
 
 div#navbar {
 	margin-top: -75px;
-	margin-bottom: 50px;
 }
 
 div#twitter {
-	
+	float: left;
 }
 
 div#follow {
@@ -135,7 +142,6 @@ div#follow {
 
 div#devlogin {
 	float: right;
-	margin-top: -20px;
 }
 
 div#footer {
@@ -148,7 +154,7 @@ div.sections {
 	width: 275px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 20px;
+	padding-top: 70px;
 }
 
 div.section1 {
