@@ -55,7 +55,6 @@
 
 <% if @applications != nil %>
 
-<div class="company">
 
 <% for a in @applications %>
 
@@ -116,56 +115,11 @@
 				</div>
 			</div>
 		
-
-									<!--
-									<div class="span-4 appinforight">
-									
-										<div class="burst">
-											<div class="burst_content">
-												<% if ( ( a.discount != nil ) && ( a.discount > 0.0 ) )%>
-													<div class="burst_percent">
-														<%= a.discount.to_i %> %
-														<div class="percentoff">
-														   Off
-														</div>
-													</div>
-												<% end %>
-											</div>
-										</div>
-										
-										<div class="app_price">
-											<%= a.sale_price %> (<%= a.price_currency%>)
-										</div>
-											
-											<div class="now">
-												<% if a.url.include? "http" %>
-													<a href="<%= a.url %>">Get it Now!</a>
-												<% else %>
-													<a href="http://<%= a.url %>">Get it Now!</a>
-												<% end %>
-											</div>
-											
-											<div class="disccode">
-											<% if a.discount_code != '' %>
-											
-												<div>Discount Code</div>
-												<%= a.discount_code %>
-											
-											<% else %>
-											
-												<div>No discount</div><div>code required</div>
-												
-											<% end %>
-											</div>
-										
-									</div>
-									-->
-		
 		<div class="clear"></div>
-		<hr class="app"/>
 		
 		</div> <!-- end appinfo div -->
-</div> <!-- end company div -->
+		
+		<hr class="app"/>
 
 	<% end %>
 	

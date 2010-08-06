@@ -40,7 +40,6 @@ a.footer:hover
 	text-decoration: underline;
 	margin-right: 5px;
 	margin-left: 5px;
-
 }
 
 img {
@@ -199,10 +198,10 @@ div.unselected_section {
 }
 
 div.company {
-	margin-top: 30px;
 }
 
 div.companyname {
+	margin-top: 30px;
 	text-align: center;
 	font-size: 1.3em;
 }
@@ -213,14 +212,15 @@ hr.app {
 
 div.appinfo {
 	width: 750px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 10px auto;
 }
 
 div.app_icon {
 	margin-left: 10px;
 	margin-right: 10px;
 	float: left;
+	width: 150px;
+	height: 150px;
 }
 
 div.app_text {
@@ -229,7 +229,7 @@ div.app_text {
 
 div.app_ident {
 	float: left;
-	width: 490px;
+	width: 480px;
 }
 
 div.app_title {
