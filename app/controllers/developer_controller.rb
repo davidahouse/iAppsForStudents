@@ -40,6 +40,9 @@ class DeveloperController < ApplicationController
       company.reg_code = generate_regcode(10)
       company.save
       Registration.deliver_signup_notification(company)
+	  
+	  flash[:notice] = '<p>Your registration information has been received.</p><p>You will receive an email shortly with your registration code in it. When you receive the email, enter your email address and the registration code in order to login.</p>'
+	  
       redirect_to :action => 'index'
     else
       company = Company.find(params[:id])

@@ -319,6 +319,14 @@ div#devapplist {
 	margin-bottom: -50px;
 }
 
+/* developer apps list */
+
+div#list_intro{
+	width: 750px;
+	font-size: 1.2em;
+	margin: -30px auto 80px;
+}
+
 /* welcome and login */
 
 div#welcome_intro{
@@ -395,6 +403,20 @@ div.pagetitle {
 	text-align: center;
 	font-size: 2em;
 	margin-bottom: 50px;
+}
+
+div#flasherror {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #9b0001;
+}
+
+div#flashnotice {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #008000;
 }
 
 /* general form */
