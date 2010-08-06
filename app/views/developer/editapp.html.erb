@@ -1,49 +1,57 @@
-<div id="intro2">
-<p>A discount code is not needed for iPhone or iPad apps.</p>
-<p></p> 
+<div id="center">
+	<div id="list_intro">
+		<p>A discount code is not needed for iPhone or iPad apps.</p>
+	</div>
 </div>
 
-<hr class="top-10"/>
+<div class="pagetitle">
+	<% if ( params[:appid] == nil ) %>
+	Register App
+	<% else %>
+	Edit App
+	<% end %>
+</div>
 
-<div id="edit-form">
+<div id="appedit">
 
 <% form_for :application, @application, :url => {:action => "saveapp", :id => @application.id }, :html => {:multipart => true} do |f| %>
 
-	<p>Title: <br/>
-	<%= f.text_field :title %></p>
+	<p class="form">Title</p>
+	<%= f.text_field :title, :class => 'iapps' %>
 	
-	<p>Description: <br/>
-	<%= f.text_area :description, :rows => 5 %></p>
+	<p class="form">Description (540 char max)</p>
+	<%= f.text_area :description, :rows => 7, :class => 'iapps' %>
 	
-	<p>Product Get It Now URL: <br/>
-	<%= f.text_field :url %></p>
+	<p class="form">Product Get It Now URL</p>
+	<%= f.text_field :url, :class => 'iapps' %>
 
-	<p>Product More Info URL: <br/>
-	<%= f.text_field :moreinfo %></p>
+	<p class="form">Product More Info URL</p>
+	<%= f.text_field :moreinfo, :class => 'iapps' %>
 	
-	<p>Discount Code: <br/>
-	<%= f.text_field :discount_code %></p>
+	<p class="form">Discount Code</p>
+	<%= f.text_field :discount_code, :class => 'iapps' %>
 	
-	<p>Icon File:  <br/>
+	<p class="form">Icon File</p>
 		<% if @application.icon.exists? %>
 		<%= image_tag @application.icon.url(:small) %>
 		<% end %>
-		<br/>
-		<%= f.file_field :icon %></p>
+		<%= f.file_field :icon, :class => 'iapps' %>
 	
-	<p>Platform:  <br/>
-		<%= f.select(:platform, [['Mac','M'],['iPhone','P'],['iPad','D'],['Universal','U']])%>
-	</p>
+	<p class="form">Platform</p>
+	<%= f.select(:platform, [['Mac','M'],['iPhone','P'],['iPad','D'],['Universal','U']], {:class => 'iaps'})%>
 	
-	<p>List Price: <br/> <%= f.text_field :list_price %></p>
-	<p>Sale Price: <br/> <%= f.text_field :sale_price %></p>
+	<p class="form">List Price</p>
+	<%= f.text_field :list_price, :class => 'iapps' %>
 	
-	<p>Price Currency: <br/>
-		<%= f.select(:price_currency,[['USD','USD'],['GBP','GBP'],['EUR','EUR']])%>
-	</p>
+	<p class="form">Sale Price</p>
+	<%= f.text_field :sale_price, :class => 'iapps' %>
 	
-	<p>
-	<%= f.submit %></p>
+	<p class="form">Price Currency</p>
+	<%= f.select(:price_currency,[['USD','USD'],['GBP','GBP'],['EUR','EUR']], {:class => 'iaps'})%>
+	
+	<div id="submit">
+		<%= f.submit %>
+	</div>
 <% end %>
 
 </div>
