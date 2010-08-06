@@ -45,6 +45,10 @@ body {
 	font-family: "Myriad Pro", "Lucida Grande", "Gill Sans";
 }
 
+div.clear {
+	clear: both;
+}
+
 div.container {
 	width: 100%;
 }
@@ -60,7 +64,7 @@ div.content {
 div#header {
 	background: url(/images/header_background.png);
 	width: 100%;
-	height: 192px;
+	height: 193px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -115,10 +119,77 @@ div#presale_follow {
 	margin-top: 5px;
 }
 
+div#navbar {
+	margin-top: -75px;
+	margin-bottom: 50px;
+}
+
+div#twitter {
+	
+}
+
+div#follow {
+	margin-top: -22px;
+	margin-left: 30px;
+}
+
+div#devlogin {
+	float: right;
+	margin-top: -20px;
+}
+
 div#footer {
 	color: #97968c;
 	text-align: center;
 	margin-top: 30px;
+}
+
+div.sections {
+	width: 275px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+div.section1 {
+	float: left;
+	margin-right: 40px;
+}
+
+div.subsection {
+	float: left;
+}
+
+div.section2 {
+	float: left;
+	margin-right: 40px;
+}
+
+div.section3 {
+	float: right;
+}
+
+div.section_icon_mac {
+	margin-left: 14px;
+}
+
+div.section_icon_iphone {
+	margin-left: 20px;
+}
+
+div.section_icon_ipad {
+	margin-left: 17px;
+}
+
+div.section_label {
+	text-align: center;
+}
+
+div.selected_section {
+}
+
+div.unselected_section {
+	opacity: 0;
 }
 
 #edit-form {

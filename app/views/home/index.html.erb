@@ -3,31 +3,53 @@
 
 <% if ENV['saleActive'] == 'YES' %>
 
-<div id="intro">
-Get back to school with these fantastic software discounts from independent Mac and iPhone developers. 
+<div id="navbar">
+	<div id="twitter">
+		<a href="http://twitter.com/iappsforstudent" class="iapps">
+			<img src="images/twitter.png"/>
+			<div id="follow">Follow Us</div>
+		</a>
+	</div>
+	<div id="devlogin">
+		<a href="/developer" class="iapps">Developer Login</a></div>
+	</div>
 </div>
+		
+<div class="clear"></div>
 
 <div class="sections">
 
 	<div class="section1">
-		<a href="/?platform=mac"><img width="100px" height="100px" src="/images/imac-256.png"/></a>
-		<div class="<% if @platform == 'mac' %>selected_section<% else %>unselected_section<% end %>" ><a href="/?platform=mac">Mac</a></div>
+		<div class="section_icon_mac">
+			<a href="/?platform=mac" class="iapps">
+				<img src="/images/mac.png"/>
+			</a>
+		</div>
+		<div class="section_label"><a href="/?platform=mac" class="iapps">Mac</a></div>
+		<div class="<% if @platform == 'mac' %>selected_section<% else %>unselected_section<% end %>" ><img src="/images/selection.png"/></div>
 	</div>	
 	
 	<div class="subsection">
 		<div class="section2">
-			<a href="/?platform=iphone"><img width="100px" height="100px" src="/images/iPhone.png"></a>
-			<div class="<% if @platform == 'iphone' %>selected_section<% else %>unselected_section<% end %>"><a href="/?platform=iphone">iPhone</a></div>
+			<div class="section_icon_iphone">
+				<a href="/?platform=iphone" class="iapps"><img src="/images/iphone.png"></a>
+			</div>
+			<div class="section_label"><a href="/?platform=iphone" class="iapps">iPhone</a></div>
+			<div class="<% if @platform == 'iphone' %>selected_section<% else %>unselected_section<% end %>"><img src="/images/selection.png"/></div>
 		</div>
 		
 		<div class="section3">
-			<a href="/?platform=ipad"><img width="100px" height="100px" src="/images/iPad.png"></a>
-			<div class="<% if @platform == 'ipad' %>selected_section<% else %>unselected_section<% end %>"><a href="/?platform=ipad">iPad</a></div>
+			<div class="section_icon_ipad">
+				<a href="/?platform=ipad" class="iapps"><img src="/images/ipad.png"></a>
+			</div>
+			<div class="section_label"><a href="/?platform=ipad" class="iapps">iPad</a></div>
+			<div class="<% if @platform == 'ipad' %>selected_section<% else %>unselected_section<% end %>"><img src="/images/selection.png"/></div>
 		</div>
 	</div>
 
 </div>
 
+<div class="clear"></div>
 
 <% last_company = nil %>
 
@@ -125,7 +147,7 @@ Get back to school with these fantastic software discounts from independent Mac 
 		<div id="salestats">
 			<div><%= @devcount %> Developers</div>
 			<div><%= @appcount %> Applications</div>
-			<div>$<%= @totaldiscount %> in discounts</div>
+			<div>$<%= @totaldiscount %> in Discounts</div>
 		</div>
 		
 		<div id="presale_developers"><a href="/developer" class="iapps">Developers Sign Up Here</a><div>or <a href="/developer" class="iapps">Login</a></div></div>
