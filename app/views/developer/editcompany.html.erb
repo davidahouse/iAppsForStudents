@@ -1,24 +1,20 @@
 
-<hr class="top-10"/>
-
-<div id="edit-form">
+<div class="pagetitle">
+Edit Company
+</div>
 
 <% form_for :company, @company, :url => {:action => "savecompany", :id => @company.id }, :html => {:multipart => true} do |f| %>
 
-	<p>Title: <br/>
-	<%= f.text_field :title %></p>
+	<div class="editcompany">
+		<p class="form">Company Name</p><%= f.text_field :title, :class => 'iapps' %>
+		<p class="form">Email</p><%= f.text_field :email, :class => 'iapps' %>
+		<p class="form">Contact</p><%= f.text_field :contact, :class => 'iapps' %>
+		<p class="form">Site URL</p><%= f.text_field :url, :class => 'iapps' %>
+		
+		<div id="submit">
+			<%= f.submit %>
+		</div>
+	</div>
 	
-	<p>Email: <br/>
-	<%= f.text_field :email %></p>
-
-	<p>Contact: <br/>
-	<%= f.text_field :contact %></p>
-	
-	<p>Site URL: <br/>
-	<%= f.text_field :url %></p>
-
-	<p>
-	<%= f.submit %></p>
 <% end %>
 
-</div>

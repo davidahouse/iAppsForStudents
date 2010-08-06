@@ -1,6 +1,6 @@
 class DeveloperController < ApplicationController
 
-  layout 'main'
+  layout 'developer'
 
   def generate_regcode(length=6)
     chars = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ23456789'
@@ -13,8 +13,6 @@ class DeveloperController < ApplicationController
     if ( session[:company] != nil )
       redirect_to :action => 'list'
     end
-	
-	render :layout => 'admin'
   end
   
   def login
@@ -63,8 +61,6 @@ class DeveloperController < ApplicationController
     else
       redirect_to :action => 'index'
     end
-	
-	render :layout => 'admin' 
   end
 
   def editcompany

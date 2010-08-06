@@ -17,14 +17,12 @@
 	
 	<% form_tag(:action => 'login', :method => 'post', :multipart => true ) do %>
 		<div class="signin">
-			<div class="signinoffset">
-				<p class="login">Email</p><%= text_field_tag "email", nil, :class => 'iapps', :id => 'loginemail' %>
-				
-				<p class="login">Registration Code</p><%= text_field_tag "reg_code", nil, :class => 'iapps', :id => 'loginregcode' %>
-				
-				<div id="loginsubmit">
-					<%= submit_tag 'Submit' %>
-				</div>
+			<p class="form">Email</p><%= text_field_tag "email", nil, :class => 'iapps' %>
+			
+			<p class="form">Registration Code</p><%= text_field_tag "reg_code", nil, :class => 'iapps' %>
+			
+			<div id="submit">
+				<%= submit_tag 'Submit' %>
 			</div>
 		</div>			
 	<% end %>
