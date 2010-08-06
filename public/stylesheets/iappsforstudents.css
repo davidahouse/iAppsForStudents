@@ -392,6 +392,12 @@ div#appedit {
 	margin-bottom: 80px;
 }
 
+div#icon_info {
+	font-size: .75em;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
 /* general page */
 
 div.pagetitle {

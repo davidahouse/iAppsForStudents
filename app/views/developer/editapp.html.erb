@@ -35,6 +35,7 @@
 		<% if @application.icon.exists? %>
 		<%= image_tag @application.icon.url(:small) %>
 		<% end %>
+		<div id="icon_info">(150px X 150px - Will be scaled)</div>
 		<%= f.file_field :icon, :class => 'iapps' %>
 	
 	<p class="form">Platform</p>
