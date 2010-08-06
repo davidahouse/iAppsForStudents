@@ -59,7 +59,11 @@
 <% for a in @applications %>
 
 	<% if last_company != a.company %>
-		<div class="companyname"><%= a.company.title %></div>
+		<% if a.company.url != nil && a.company.url != '' %>
+			<div class="companyname"><a href="<%= a.company.url %>" class="iapps"><%= a.company.title %></a></div>
+		<% else %>
+			<div class="companyname"><%= a.company.title %></div>
+		<% end %>
 		<hr class="app"/>
 		
 		<% last_company = a.company %>
@@ -83,6 +87,9 @@
 					
 					<div class="app_description">
 						<%= a.description %>
+						<% if a.moreinfo != nil && a.moreinfo != '' %>
+							<a href="<%= a.moreinfo %>" class="iapps"> (more)</a>
+						<% end %>
 					</div>
 				</div>
 				
