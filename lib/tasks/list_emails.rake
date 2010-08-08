@@ -4,8 +4,10 @@ task :list_emails, :needs => :environment do
 
   for c in companies
 
-    print c.contact,": ",c.email,"\n"
+    print c.email,","
 
   end
+  
+  print "\n"
   
 end

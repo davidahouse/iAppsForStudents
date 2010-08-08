@@ -60,7 +60,7 @@
 
 	<% if last_company != a.company %>
 		<% if a.company.url != nil && a.company.url != '' %>
-			<div class="companyname"><a href="<%= a.company.url %>" class="iapps"><%= a.company.title %></a></div>
+			<div class="companyname"><a href="<%= safeURL(a.company.url) %>" class="iapps"><%= a.company.title %></a></div>
 		<% else %>
 			<div class="companyname"><%= a.company.title %></div>
 		<% end %>
@@ -88,22 +88,22 @@
 					<div class="app_description">
 						<%= a.description %>
 						<% if a.moreinfo != nil && a.moreinfo != '' %>
-							<a href="<%= a.moreinfo %>" class="iapps"> (more)</a>
+							<a href="<%= safeURL(a.moreinfo) %>" class="iapps"> (more)</a>
 						<% end %>
 					</div>
 				</div>
 				
 				<div class="app_detail">
 					<div class="app_buy">
-						<a href="http://<%= a.url %>"><img src="/images/buybox.png"/></a>
-						<a href="http://<%= a.url %>" class="app_detail"><div class="buy">BUY</div></a>
+						<a href="<%= safeURL(a.url) %>"><img src="/images/buybox.png"/></a>
+						<a href="<%= safeURL(a.url) %>" class="app_detail"><div class="buy">BUY</div></a>
 						
 						<div class="app_price">
-							<a href="http://<%= a.url %>" class="app_detail"><%= a.sale_price %> (<%= a.price_currency%>)</a>
+							<a href="<%= safeURL(a.url) %>" class="app_detail"><%= a.sale_price %> (<%= a.price_currency%>)</a>
 						</div>
 											
 						<div class="percentoff">
-							<a href="http://<%= a.url %>" class="app_detail"><%= a.discount.to_i %> % Off</a>
+							<a href="<%= safeURL(a.url) %>" class="app_detail"><%= a.discount.to_i %> % Off</a>
 						</div>
 						
 						<div class="disccode">
