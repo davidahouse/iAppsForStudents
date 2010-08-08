@@ -17,6 +17,7 @@ class Application < ActiveRecord::Base
   
 protected
 def validate
+  errors.add(:title,"Title should not be empty") if title.nil?
   errors.add(:list_price, "List price should be at least 0.01") if list_price.nil? || list_price < 0.01
   errors.add(:sale_price, "Sale price should be at least 0.01") if sale_price.nil? || sale_price < 0.01
 end
