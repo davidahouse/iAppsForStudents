@@ -24,25 +24,33 @@ class HomeController < ApplicationController
       end
     
     else
-      @devcount = Company.count
-      
+      last_company = nil
+      @devcount = 0      
       @appcount = 0
       @totaldiscount = 0.0
-      apps = Application.find(:all)
+      apps = Application.find(:all,:include => :company, :order => "companies.title,applications.title")
       for a in apps
         
-        if ( ( a.price_currency != nil ) && ( a.list_price != nil ) && (a.sale_price != nil) )
+        if a.company != nil
         
-          if ( a.price_currency == 'USD' )
-            @totaldiscount = @totaldiscount + (a.list_price - a.sale_price)
-          elsif ( a.price_currency == 'EUR' )
-            @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.2979)
-          else
-            @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.5583)
+          if last_company != a.company
+            @devcount = @devcount + 1
+            last_company = a.company
           end
-        end
         
-        @appcount = @appcount + 1
+          if ( ( a.price_currency != nil ) && ( a.list_price != nil ) && (a.sale_price != nil) )
+        
+            if ( a.price_currency == 'USD' )
+              @totaldiscount = @totaldiscount + (a.list_price - a.sale_price)
+            elsif ( a.price_currency == 'EUR' )
+              @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.2979)
+            else
+              @totaldiscount = @totaldiscount + ((a.list_price - a.sale_price) * 1.5583)
+            end
+          end
+        
+          @appcount = @appcount + 1
+        end
       end
       
       @totaldiscount = @totaldiscount.to_i

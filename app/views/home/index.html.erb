@@ -58,6 +58,8 @@
 
 <% for a in @applications %>
 
+	<% if a.company != nil %>
+
 	<% if last_company != a.company %>
 		<% if a.company.url != nil && a.company.url != '' %>
 			<div class="companyname"><a href="<%= safeURL(a.company.url) %>" class="iapps"><%= a.company.title %></a></div>
@@ -130,6 +132,7 @@
 
 	<% end %>
 	
+<% end %>
 <% end %>
 <% end %>
 
