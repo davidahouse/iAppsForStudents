@@ -59,4 +59,19 @@ class HomeController < ApplicationController
     
   end
 
+  def company_list
+    last_company = nil
+    @companies = Array.new
+    apps = Application.find(:all,:include => :company, :order => "companies.title,applications.title")
+    for a in apps      
+      if a.company != nil
+        if last_company != a.company
+          @companies << a.company
+          last_company = a.company
+        end
+      end
+    end
+    
+  end
+
 end
