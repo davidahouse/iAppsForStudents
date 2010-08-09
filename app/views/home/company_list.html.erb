@@ -10,7 +10,7 @@
 <%   if c.title != nil %>
 
 <% if c.url != nil && c.url != '' %>
-	<div class="companyname"><a href="<%= safeURL(c.url) %>" class="iapps"><%= c.title %></a></div>
+	<div class="companyname"><a href="<%= safeURL(c.url) %>" class="iapps" target="_new"><%= c.title %></a></div>
 <% else %>
 	<div class="companyname"><%= c.title %></div>
 <% end %>
