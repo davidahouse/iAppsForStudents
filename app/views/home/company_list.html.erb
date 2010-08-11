@@ -1,0 +1,22 @@
+
+<div class="center">
+
+<div id="welcome_intro">
+<p>A special thanks to all the developers that are helping to make this promotion a success.</p>
+</div>
+
+
+<% for c in @companies %>
+<%   if c.title != nil %>
+
+<% if c.url != nil && c.url != '' %>
+	<div class="companyname"><a href="<%= safeURL(c.url) %>" class="iapps" target="_new"><%= c.title %></a></div>
+<% else %>
+	<div class="companyname"><%= c.title %></div>
+<% end %>
+
+<%   end %>
+<% end %>
+
+
+</div>
