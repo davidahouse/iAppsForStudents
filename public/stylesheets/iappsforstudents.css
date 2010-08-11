@@ -152,8 +152,27 @@ div#presale_follow {
 	margin-top: 5px;
 }
 
+div.presale_subscribe {
+	margin-top: 30px;
+	font-size: 0.75em;
+}
+
 div#navbar {
 	margin-top: -75px;
+}
+
+div#leftnavbar {
+	margin-left: -75px;
+}
+
+div#navsubscribe {
+	width: 90px;
+	margin-left: 105px;
+	margin-top: -19px;
+}
+
+a#navsubscribe {
+	margin-left: 5px;
 }
 
 div#twitter {
@@ -380,6 +399,21 @@ div.editcompany {
 	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* newsletter */
+
+div.newsletter_subscribe {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#newsletter_sub_intro {
+	width: 347px;
+	font-size: 1.2em;
+	text-align: center;
+	margin: -30px auto 40px;
 }
 
 /* edit app */
