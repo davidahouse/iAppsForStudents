@@ -1,18 +1,28 @@
 task :list_applications, :needs => :environment do
 
-  apps = Application.find(:all)
+  apps = Application.find(:all,:include => :company, :order => "companies.title,applications.title")
 
   for a in apps
-    
+
+    title = ''
+    company = ''
+
     if a.title == nil
-      print "UNKNOWN\t\t\t\t",a.id.to_s,"\n"
-    elsif a.company == nil
-      print a.title,"\t\t\t\tCOMPANY IS NIL!","\n"
-    elsif a.company.title == nil
-      print a.title,"\t\t\t\tCOMPANY TITLE IS NIL!","\n"
+      title = 'UNKNOWN'
     else
-      print a.title,"\t\t\t\t",a.company.title,"\n"
+      title = a.title
     end
+    
+    if a.company == nil
+      company = 'COMPANY IS NIL!'
+    elsif a.company.title == nil
+      company = 'COMPANY TITLE IS NIL!'
+    else
+      company = a.company.title
+    end
+
+    print title,"\n"
+    print company,"\n\n"
 
   end
   
