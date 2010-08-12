@@ -104,7 +104,7 @@
 						<a href="<%= safeURL(a.url) %>" class="app_detail" target="_new"><div class="buy">BUY</div></a>
 						
 						<div class="app_price">
-							<a href="<%= safeURL(a.url) %>" class="app_detail" target="_new"><%= number_with_precision(a.sale_price, :precision => 2) %> (<%= a.price_currency%>)</a>
+							<a href="<%= safeURL(a.url) %>" class="app_detail" target="_new"><%= currSymbol(a.price_currency) %><%= number_with_precision(a.sale_price, :precision => 2) %></a>
 						</div>
 											
 						<div class="percentoff">
