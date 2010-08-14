@@ -17,13 +17,13 @@ module DeveloperHelper
   def currSymbol(currency)
   
     if currency == "USD"
-      return "$"
+      return 'USD '
     elsif currency == "GBP"
       return "£"
     elsif currency == "EUR"
       return "€"
     else
-      return "$"
+      return '$'
     end
   end
   
