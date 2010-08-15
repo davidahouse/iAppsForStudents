@@ -13,13 +13,13 @@ class HomeController < ApplicationController
       
       # gather up all the applications sorted by company first, then application second
       if ( @platform == 'mac' )
-        @applications = Application.find(:all,:include => :company, :order => "companies.title,applications.title", 
+        @applications = Application.find(:all,:include => :company, :order => "companies.display_order,applications.title", 
                       :conditions => ['applications.platform = ?','M'])
       elsif ( @platform == 'iphone' )
-        @applications = Application.find(:all,:include => :company, :order => "companies.title,applications.title",
+        @applications = Application.find(:all,:include => :company, :order => "companies.display_order,applications.title",
                     :conditions => ['applications.platform = ? or applications.platform = ?','P','U'])
       elsif (@platform == 'ipad')
-        @applications = Application.find(:all,:include => :company, :order => "companies.title,applications.title",
+        @applications = Application.find(:all,:include => :company, :order => "companies.display_order,applications.title",
                     :conditions => ['applications.platform = ? or applications.platform = ?','D','U'])  
       end
     
