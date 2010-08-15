@@ -79,15 +79,17 @@
 		<div class="appinfo">
 	 
 			<div class="app_icon">
+				<a href="<%= safeURL(a.url) %>" target="_new">
 				<% if ( (a.icon != nil) && (a.icon.exists?) ) %>
 				<%= image_tag a.icon.url(:small) %>
 				<% end %>
+				</a>
 			</div>
 
 			<div class="app_text">
 				<div class="app_ident">
 					<div class="app_title">
-						<%= a.title %>
+						<a href="<%= safeURL(a.url) %>" class="iapps" target="_new"><%= a.title %></a>
 					</div>
 					
 					<div class="app_description">
