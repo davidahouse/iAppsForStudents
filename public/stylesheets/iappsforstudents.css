@@ -85,7 +85,7 @@ div.container {
 }
 
 div.content {
-	width: 80%;
+	width: 950px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 80px;
@@ -100,6 +100,16 @@ div#header {
 	margin-left: auto;
 }
 
+div#headercontent {
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div#headnav {
+	margin-left: -50px;
+}
+
 div#logo {
 	margin-left: auto;
 	margin-right: auto;
@@ -108,12 +118,14 @@ div#logo {
 	padding-top: 30px;
 }
 
-div#banner {
-	margin-left: auto;
-	margin-right: auto;
-	width: 669px;
-	height: 92px;
+img#banner {
 	margin-top: 30px;
+	margin-left: -45px;
+}
+
+div#banner {
+	width: 950px;
+	height: 92px;
 }
 
 div#presale {
@@ -157,14 +169,6 @@ div.presale_subscribe {
 	font-size: 0.75em;
 }
 
-div#navbar {
-	margin-top: -75px;
-}
-
-div#leftnavbar {
-	margin-left: -75px;
-}
-
 div#navsubscribe {
 	width: 90px;
 	margin-left: 105px;
@@ -177,6 +181,8 @@ a#navsubscribe {
 
 div#twitter {
 	float: left;
+	margin-top: 60px;
+	margin-right: 20px;
 }
 
 div#follow {
@@ -186,6 +192,8 @@ div#follow {
 
 div#devlogin {
 	float: right;
+	margin-top: -30px;
+	margin-right: 55px;
 }
 
 div#footer {
@@ -201,7 +209,7 @@ div.sections {
 	width: 275px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 70px;
+	padding-top: 15px;
 }
 
 div.section1 {
