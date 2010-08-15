@@ -136,6 +136,9 @@ class DeveloperController < ApplicationController
     redirect_to :action => 'list'
   end
   
-
+  def logout
+    session[:company] = nil
+    redirect_to :action => 'index'
+  end
   
 end
