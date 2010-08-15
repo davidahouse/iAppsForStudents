@@ -79,7 +79,7 @@
 		<div class="appinfo">
 	 
 			<div class="app_icon">
-				<% if a.icon.exists? %>
+				<% if ( (a.icon != nil) && (a.icon.exists?) ) %>
 				<%= image_tag a.icon.url(:small) %>
 				<% end %>
 			</div>
