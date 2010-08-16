@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100815125110) do
+ActiveRecord::Schema.define(:version => 20100816234546) do
 
   create_table "applications", :force => true do |t|
     t.string   "title"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20100815125110) do
     t.string   "moreinfo"
   end
 
+  add_index "applications", ["company_id"], :name => "index_applications_on_company_id"
+
   create_table "companies", :force => true do |t|
     t.string   "title"
     t.string   "email"
@@ -42,5 +44,7 @@ ActiveRecord::Schema.define(:version => 20100815125110) do
     t.string   "url"
     t.integer  "display_order"
   end
+
+  add_index "companies", ["display_order"], :name => "index_companies_on_display_order"
 
 end
