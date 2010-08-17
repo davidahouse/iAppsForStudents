@@ -67,7 +67,10 @@
 			<div class="app_icon">
 				<a href="<%= safeURL(a.url) %>" target="_new">
 				<% if (a.icon != nil) %>
+				<%    iconurl = a.icon.url(:small) %>
+				<%    if iconurl != '/icons/small/missing.png' %>
 				<%= image_tag a.icon.url(:small) %>
+				<%    end %>
 				<% end %>
 				</a>
 			</div>
