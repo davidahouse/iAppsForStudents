@@ -23,6 +23,8 @@ class HomeController < ApplicationController
                     :conditions => ['applications.platform = ? or applications.platform = ?','D','U'])  
       end
     
+    elsif ENV['saleActive'] == 'FUTURE'
+    
     else
       last_company = nil
       @devcount = 0      

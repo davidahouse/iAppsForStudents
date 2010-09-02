@@ -130,10 +130,35 @@
 <% end %>
 <% end %>
 
+
+<% elsif ENV['saleActive'] == 'FUTURE' %>
+
+<div id="presale">
+
+<br/>
+
+<div class="center">
+	<div id="list_intro">
+		<p>The iAppsForStudents back to school sale is over for 2010. A special thanks to all that have made the sale possible, we really enjoyed brining you these awesome discounts. Please visit the developers list below and have a look at their applications, they are all deserving of your business.</p>
+			
+		<p>We will offer this sale next year, so signup for the newsletter or follow us on twitter so we can keep you posted on the details.</p>
+
+	</div>
+</div>
+
+<div id="center">
+	<div class="presale_subscribe">
+		<a href="/newsletter/subscribe" class="iapps">
+			Subscribe to our Newsletter
+		</a>
+	</div>
+</div>
+
+</div>
 <% else %>
 
 	<div id="presale">
-		<script type="text/javascript">countdown_clock(10, 08, 15, 00, 00, 1);</script>
+		<script type="text/javascript">countdown_clock(11, 08, 15, 00, 00, 1);</script>
 
 		<div id="salestart">Sale Start</div>
 
